@@ -30,7 +30,7 @@ public class TestPasswordShould {
     }
 
     @Test
-    public void be_invalid_when_does_not_contain_a_capital_letter() {
+    public void be_invalid_when_does_not_contain_a_capital_character() {
         String input = "password1_";
         Password password = new Password();
 
@@ -38,7 +38,7 @@ public class TestPasswordShould {
     }
 
     @Test
-    public void be_invalid_when_does_not_contain_a_lower_case_letter() {
+    public void be_invalid_when_does_not_contain_a_lower_case_character() {
         String input = "PASSWORD1_";
         Password password = new Password();
 
