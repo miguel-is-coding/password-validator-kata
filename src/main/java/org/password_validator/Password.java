@@ -2,9 +2,11 @@ package org.password_validator;
 
 import java.util.regex.Pattern;
 
+import static org.password_validator.Length.lengthOf;
+
 public class Password {
 
-    private static final int MINIMAL_LENGTH = 8;
+    private static final Length MINIMAL_LENGTH = lengthOf(8);
 
     public boolean isValid(String input) {
         return hasValidLength(input) && hasCapitalLetter(input) &&
@@ -12,7 +14,8 @@ public class Password {
     }
 
     private static boolean hasValidLength(String input) {
-        return input.length() >= MINIMAL_LENGTH;
+        Length inputLength = lengthOf(input.length());
+        return inputLength.isGreaterThan(MINIMAL_LENGTH);
     }
 
     private static boolean hasCapitalLetter(String input) {
