@@ -10,7 +10,7 @@ public class Password {
     }
 
     private static boolean hasValidLength(String input) {
-        return input.length() > 8;
+        return input.length() >= 8;
     }
 
     private static boolean hasCapitalLetter(String input) {
