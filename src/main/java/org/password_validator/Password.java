@@ -8,7 +8,11 @@ public class Password {
     }
 
     public boolean isValid(String input) {
-        return hasCapitalLetter(input) && hasValidLength(input);
+        return hasCapitalLetter(input) && hasValidLength(input) && hasLowerCaseLetter(input);
+    }
+
+    private static boolean hasLowerCaseLetter(String input) {
+        return Pattern.matches(".*[a-z].*", input);
     }
 
     private static boolean hasCapitalLetter(String input) {
