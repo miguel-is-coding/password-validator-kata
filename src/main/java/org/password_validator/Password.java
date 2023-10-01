@@ -6,10 +6,10 @@ public class Password {
     }
 
     public boolean isValid(String input) {
-        return hasValidLenght(input);
+        return hasValidLength(input);
     }
 
-    private static boolean hasValidLenght(String input) {
+    private static boolean hasValidLength(String input) {
         return input.length() > 8;
     }
 }
