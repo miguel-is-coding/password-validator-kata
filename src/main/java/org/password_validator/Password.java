@@ -4,11 +4,12 @@ import java.util.regex.Pattern;
 
 public class Password {
 
-    public Password() {
+    public boolean isValid(String input) {
+        return hasCapitalLetter(input) && hasValidLength(input) && hasLowerCaseLetter(input) && hasNumber(input);
     }
 
-    public boolean isValid(String input) {
-        return hasCapitalLetter(input) && hasValidLength(input) && hasLowerCaseLetter(input);
+    private static boolean hasNumber(String input) {
+        return Pattern.matches(".*\\d.*", input);
     }
 
     private static boolean hasLowerCaseLetter(String input) {
