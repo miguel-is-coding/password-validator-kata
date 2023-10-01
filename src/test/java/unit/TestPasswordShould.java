@@ -1,5 +1,6 @@
 package unit;
 
+import org.junit.Assert;
 import org.password_validator.Password;
 import org.junit.Test;
 
@@ -18,5 +19,13 @@ public class TestPasswordShould {
         Password password = new Password();
 
         assert (password.isValid(input));
+    }
+
+    @Test
+    public void be_invalid_when_has_less_than_eight_characters() {
+        String input = "Pass1_";
+        Password password = new Password();
+
+        Assert.assertFalse(password.isValid(input));
     }
 }
