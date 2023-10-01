@@ -12,3 +12,5 @@ A valid password should meet the following requirements:
 - Contains a lowercase
 - Contains a number
 - Contains an underscore
+
+This kata has been done following the **Object Calisthenics** steps introduced by **Jeff Bay** (You can find more info about this [here](https://developerhandbook.stakater.com/content/architecture/object-calisthenics.html))
