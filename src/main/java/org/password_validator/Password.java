@@ -5,7 +5,11 @@ import java.util.regex.Pattern;
 public class Password {
 
     public boolean isValid(String input) {
-        return hasCapitalLetter(input) && hasValidLength(input) && hasLowerCaseLetter(input) && hasNumber(input);
+        return hasCapitalLetter(input) && hasValidLength(input) && hasLowerCaseLetter(input) && hasNumber(input) && hasUnderscore(input);
+    }
+
+    private static boolean hasUnderscore(String input) {
+        return Pattern.matches(".*_.*", input);
     }
 
     private static boolean hasNumber(String input) {

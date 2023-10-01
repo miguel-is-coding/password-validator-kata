@@ -52,4 +52,12 @@ public class TestPasswordShould {
 
         Assert.assertFalse(password.isValid(input));
     }
+
+    @Test
+    public void be_invalid_when_does_not_contain_an_underscore_character() {
+        String input = "PasswordD1";
+        Password password = new Password();
+
+        Assert.assertFalse(password.isValid(input));
+    }
 }
