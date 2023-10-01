@@ -4,13 +4,15 @@ import java.util.regex.Pattern;
 
 public class Password {
 
+    private static final int MINIMAL_LENGTH = 8;
+
     public boolean isValid(String input) {
         return hasValidLength(input) && hasCapitalLetter(input) &&
                 hasLowerCaseLetter(input) && hasNumber(input) && hasUnderscore(input);
     }
 
     private static boolean hasValidLength(String input) {
-        return input.length() >= 8;
+        return input.length() >= MINIMAL_LENGTH;
     }
 
     private static boolean hasCapitalLetter(String input) {
